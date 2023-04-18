@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Vacina Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Dependentes</p>
+  <ion-list>
+    <ion-item-sliding *ngFor="let dependente of dependentes; let i = index">
+      <ion-card>
+        <ion-item>
+          <ion-label>{{dependente.nome}}<br>{{dependente.dataNasc}}</ion-label>
+          <ion-button href="/dependentes"><ion-icon name="people-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-card>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

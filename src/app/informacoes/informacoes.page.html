@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Vacina Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Informações</p>
+
+  <ion-list>
+    <ion-list-header *ngFor="let informacao of informacoes; let i = index">
+      <ion-card>
+        <div>
+          <h4>{{informacao.titulo}}</h4>
+          <ion-label>{{informacao.descricao}}</ion-label> <br>
+          <ion-button size="small" fill="outline">Ler mais</ion-button>
+        </div>
+      </ion-card>
+    </ion-list-header>
+  </ion-list>
+
+</ion-content>

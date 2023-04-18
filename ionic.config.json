@@ -1,0 +1,7 @@
+{
+  "name": "vacinaOnline",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Vacina Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Minhas Vacinas</p>
+
+  <ion-row size="12">
+      <ion-button size="small" color="dark" href="/carteirinha">Carteirinha</ion-button>
+      <ion-button size="small" color="dark" href="/cadastroVacina">Nova vacina</ion-button>
+  </ion-row>
+  <ion-list>
+    <ion-item-sliding *ngFor="let vacina of vacinas; let i = index">
+      <ion-card>
+        <ion-item>
+          <ion-label>{{vacina.nome}}
+            <h3>aplicada em: {{vacina.dataCad}}</h3>
+            <h3>Vencimento: {{vacina.dataVenc}}</h3>
+          </ion-label>
+          <ion-button href="/vacinas"><ion-icon name="eyedrop-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-card>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

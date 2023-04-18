@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Vacina Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Notificações</p>
+
+  <ion-button>Marcar todas como lidas</ion-button>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let notificacao of notificacoes; let i = index">
+      <ion-item>
+        <ion-icon name="ellipse"></ion-icon>
+        <ion-label>{{notificacao.descricao}} <h4>{{notificacao.data}}</h4></ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
